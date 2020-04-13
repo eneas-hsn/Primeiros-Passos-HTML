@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso da Div</title>
+    <style>
+       
+        div#area {
+            font: normal 14pt arial;
+            background-color: black;
+            color: rgb(80, 255, 147);
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="area" > 
+        Interaja...
+    </div>
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseover', entrar)
+        area.addEventListener('mouseout', sair)
+        function sair() {
+            area.innerText = 'uaaau'
+            area.style.backgroundColor = 'white'
+        }
+        function entrar() {
+            area.innerText = 'Eae'
+            area.style.backgroundColor='blue'
+        }
+        function clicar() {
+            area.innerText = 'Olá'
+            area.style.backgroundColor= 'brown'
+        }
+    </script>
+</body>
+</html>
